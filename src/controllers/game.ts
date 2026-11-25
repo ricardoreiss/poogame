@@ -67,6 +67,11 @@ import { character } from "./character"
         this.turnOrder = [...this.team1, ...this.team2].filter((c) => c !== null && c.isAlive())
         this.turnOrder.sort((a, b) => b.getSpeed() - a.getSpeed())
     }
+    public ChangeOrder(team: (character | null)[], direction: number) void {
+        
+
+
+    } 
     
     public newRound(): void {
         this.rounds++
