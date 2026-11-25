@@ -67,10 +67,11 @@ import { character } from "./character"
         this.turnOrder = [...this.team1, ...this.team2].filter((c) => c !== null && c.isAlive())
         this.turnOrder.sort((a, b) => b.getSpeed() - a.getSpeed())
     }
+  
     public ChangeOrder(char: character, team: (character | null)[], direction: number) void {
         const position = char.getPosition();
         if(direction === 0) {
-            if(position != 0) {      // Se ele estiver na borda, n é para ele trocar 
+            if(position != 0) {      // Se ele estiver na borda, n é para ele trocar(também é bom checar se atrás não é null)
                const position2 = position - 1;
                const character = team[position2];
                team[position2] = char;
@@ -79,7 +80,7 @@ import { character } from "./character"
                console.log("não há personagem atrás");
             } 
         } else if (direction === 0) {
-            if(position != 3) {      // Se ele estiver na borda, n é para ele trocar 
+            if(position != 3) {      // Se ele estiver na borda, n é para ele trocar(também é bom checar se a frente não é null)
                const position2 = position + 1;
                const character = team[position2];
                team[position2] = char;
