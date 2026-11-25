@@ -68,7 +68,7 @@ import { character } from "./character"
         this.turnOrder.sort((a, b) => b.getSpeed() - a.getSpeed())
     }
     public ChangeOrder(team: (character | null)[], direction: number) void {
-        
+        const 
 
 
     } 
