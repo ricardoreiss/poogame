@@ -140,6 +140,10 @@ export class character {
     return this.hpCurrent > 0;
   }
 
+  public getPosition(): number {
+    return this.position;    
+  }
+  
   // ------------------------------------
   // 3. PASSIVAS, VIDA, ESQUIVA E DANO
   // ------------------------------------
