@@ -70,17 +70,24 @@ import { character } from "./character"
     public ChangeOrder(char: character, team: (character | null)[], direction: number) void {
         const position = char.getPosition();
         if(direction === 0) {
-            const position2 = position - 1;
-            if(position === 
-            const character = team[position2];
-            team[position2] = char;
-            team[position] = character;
+            if(position != 0) {      // Se ele estiver na borda, n é para ele trocar 
+               const position2 = position - 1;
+               const character = team[position2];
+               team[position2] = char;
+               team[position] = character;
+            } else {
+               console.log("não há personagem atrás");
+            } 
         }
         elseif (direction === 0) {
-            const position2 = position + 1;  
-            const character = team[position2];
-            team[position2] = char;
-            team[position] = character;
+            if(position != 3) {      // Se ele estiver na borda, n é para ele trocar 
+               const position2 = position + 1;
+               const character = team[position2];
+               team[position2] = char;
+               team[position] = character;
+            } else {
+               console.log("não há personagem na frente");
+            } 
         } 
         else {
             console.log("Inválido");
