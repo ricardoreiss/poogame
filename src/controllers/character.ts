@@ -57,7 +57,7 @@ export class character {
   }
 
   // ------------------------------------------------------
-  // 1. CÁLCULO DE ATTACKPWR E DEFENSEPWR
+// 1. CÁLCULO DE ATTACKPWR E DEFENSEPWR
   // ------------------------------------------------------
 
   private recalculateAttributes(): void {
