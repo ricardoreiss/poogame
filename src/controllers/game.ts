@@ -78,8 +78,7 @@ import { character } from "./character"
             } else {
                console.log("não há personagem atrás");
             } 
-        }
-        elseif (direction === 0) {
+        } else if (direction === 0) {
             if(position != 3) {      // Se ele estiver na borda, n é para ele trocar 
                const position2 = position + 1;
                const character = team[position2];
@@ -88,8 +87,7 @@ import { character } from "./character"
             } else {
                console.log("não há personagem na frente");
             } 
-        } 
-        else {
+        } else {
             console.log("Inválido");
         }
     }
