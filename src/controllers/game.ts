@@ -67,11 +67,25 @@ import { character } from "./character"
         this.turnOrder = [...this.team1, ...this.team2].filter((c) => c !== null && c.isAlive())
         this.turnOrder.sort((a, b) => b.getSpeed() - a.getSpeed())
     }
-    public ChangeOrder(team: (character | null)[], direction: number) void {
-        const 
-
-
-    } 
+    public ChangeOrder(char: character, team: (character | null)[], direction: number) void {
+        const position = char.getPosition();
+        if(direction === 0) {
+            const position2 = position - 1;
+            if(position === 
+            const character = team[position2];
+            team[position2] = char;
+            team[position] = character;
+        }
+        elseif (direction === 0) {
+            const position2 = position + 1;  
+            const character = team[position2];
+            team[position2] = char;
+            team[position] = character;
+        } 
+        else {
+            console.log("Inválido");
+        }
+    }
     
     public newRound(): void {
         this.rounds++
